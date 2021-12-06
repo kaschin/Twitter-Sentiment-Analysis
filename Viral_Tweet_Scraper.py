@@ -34,7 +34,7 @@ def scrape_pop_tweets():
 
 	# Create Array for storage to be written to CSV
 	Tweets = []
-	Tweets.append(["Username", "Tweet ID", "Tweet", "Favourites Count", "Retweet Count"])
+	Tweets.append(["Username", "Tweet ID", "Tweet", "Favourite Count", "Retweet Count"])
 	i=0
 	for location in WOEIDCodes:
 		trends = api.get_place_trends(id = location)
