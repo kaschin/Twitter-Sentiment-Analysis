@@ -43,6 +43,5 @@ if __name__ == '__main__':
 	if len(sys.argv) >= 2:
 		for i in range(1:len(sys.argv)):
 		scrape_tweets(sys.argv[i])
-
 	else:
 		print("Error: enter at least one username")
