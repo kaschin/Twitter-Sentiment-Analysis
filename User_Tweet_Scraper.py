@@ -17,7 +17,7 @@ def scrape_tweets(username):
 	api = tweepy.API(Auth)
 
 	# Set quantity of Tweets to be pulled
-	tweet_quantity = 3200
+	tweet_quantity = 1
 
 	# Intialise container for Tweets
 	Tweets = []
@@ -31,7 +31,7 @@ def scrape_tweets(username):
 	outfile = username + "_Tweets.csv"
 
 	# Write to CSV file
-	print("Writing to: " + outfile)
+	print("Writing to: " + str(outfile))
 	with open(outfile, 'w+') as file:
 		writer = csv.writer(file, delimiter=',')
 		writer.writerows(Tweets)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
 	# Get tweets for username(s) passed at command line
 	if len(sys.argv) >= 2:
-		for i in range(1:len(sys.argv)):
-		scrape_tweets(sys.argv[i])
+		for i in range(1, len(sys.argv)):
+			scrape_tweets(sys.argv[i])
 	else:
-		print("Error: enter at least one username")
+		print("Error! Enter at least one username.")
