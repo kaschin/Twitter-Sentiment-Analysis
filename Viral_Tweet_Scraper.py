@@ -50,7 +50,7 @@ def scrape_viral_tweets():
 					Tweets.append([tweeter['screen_name'], tweet._json['id_str'], tweet._json['text'], tweet._json['favorite_count'], tweet._json['retweet_count']])
 
 	# Create CSV Outfile
-	outfile = "Viral_Tweets.csv"
+	outfile = "Datasts/Viral_Tweets.csv"
 	# Write to CSV File
 	print("Writing to: " + str(outfile))
 	with open(outfile, 'w+') as file:
