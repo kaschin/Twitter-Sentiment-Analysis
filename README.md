@@ -1,6 +1,6 @@
 # Twitter Sentiment Analysis
 
-A Sentiment Model that can be used to analysed the Sentiment of a series of Twitter Messages.
+A Sentiment Model that can be used to analyse the Sentiment of a series of Twitter Messages.
 
 ## Description
 
