@@ -20,7 +20,7 @@ Python3 Viral_Tweet_Scraper.py
 ```
 If a custom dataset is used, modify line 136 of SentimentModel.py to contain the name of the new directory.
 ```
-136   tweets_for_analysis = pandas.read_csv('custom_dataset.csv')
+136   tweets_for_analysis = pandas.read_csv('Datasets/custom_dataset.csv')
 ```
 ### Dependencies
 
