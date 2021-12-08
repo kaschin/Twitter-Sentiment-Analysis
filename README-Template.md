@@ -1,44 +1,44 @@
-# Project Title
+# Twitter Sentiment Analysis
 
-Simple overview of use/purpose.
+A Sentiment Model that can be used to analysed the Sentiment of a series of Twitter Messages.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+The intent of the project is to form an analysis of the Sentiment distribution of a series of Tweets. The Sentiment Model is trained to interpet Positive, Neutral and Negative sentiments but is restricted to only understanding words within the bounds of the provided training dataset. Scraping functions are provided to prepare datasets for the model to be tested on.
 
 ## Getting Started
 
+#### Preparing Data (Optional)
+The provided datasets can be used to test the Sentiment Model, or a custom dataset can be created with the following functions.
+* User_Tweet_Scraper.py can be called with at least one argument to write to a/multiple CSV file(s) with Tweets pulled from the specified Twitter handle(s). Example terminal:
+```
+Python3 User_Tweet_Scraper.py TwittHandle1 TwitterHandle2 ... TwitterHandleN
+```
+* Viral_Tweet_Scraper.py can be used to pull the most popular Tweets of trending topics on Twitter within the most active regions. Example terminal:
+```
+Python3 Viral_Tweet_Scraper.py
+```
+If a custom dataset is used, modify line 136 of SentimentModel.py to contain the name of the new directory.
+```
+136   tweets_for_analysis = pandas.read_csv('custom_dataset.csv')
+```
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* NLTK, Pandas, Tweepy
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Project can be downloaded directly from Github with directories in place.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* Model can be built and tested with the following command:
 ```
-code blocks for commands
+Python3 SentimentModel.py 
 ```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+* Kayla Schinella 
 
 ## Version History
 
@@ -48,15 +48,6 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 * 0.1
     * Initial Release
 
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
