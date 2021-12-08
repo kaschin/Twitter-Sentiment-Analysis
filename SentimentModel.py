@@ -166,13 +166,4 @@ if __name__ == '__main__':
      	custom_tokens = RemoveNoise(word_tokenize(custom_tweet))
 
      	print("Tweet Message: " + custom_tweet + "\n" + "Sentiment is: " + classifier.classify(dict([token, True] for token in custom_tokens)))
-
-
-
-
-
-
-
-
-
-
+        
