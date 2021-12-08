@@ -133,9 +133,9 @@ def Build_Model():
 if __name__ == '__main__':
 
     # Implement a CSV of Twitter messages to be tested on
-    Viral_Tweets = pandas.read_csv('Datasets/1future_tweets.csv')
-    Viral_Tweets = pandas.DataFrame(Viral_Tweets, columns = Viral_Tweets.columns)
-    DF_length = float(len(Viral_Tweets))
+    tweets_for_analysis = pandas.read_csv('Datasets/1future_tweets.csv')
+    tweets_for_analysis = pandas.DataFrame(tweets_for_analysis, columns = tweets_for_analysis.columns)
+    DF_length = float(len(tweets_for_analysis))
 
     # Input a list of Custom Tweets here to be tested
     custom_tweets = ["The wall is white", "That is ugly", "Awesome!"]
@@ -147,7 +147,7 @@ if __name__ == '__main__':
     classifier = Build_Model()
 
     # Analyse Viral Tweets from dataset
-    for tweet in Viral_Tweets['Tweet']:
+    for tweet in tweets_for_analysis['Tweet']:
         custom_tokens = RemoveNoise(word_tokenize(tweet))
         sentiment = (classifier.classify(dict([token, True] for token in custom_tokens)))
         if (sentiment == "Positive"):
