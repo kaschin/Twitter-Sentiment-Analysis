@@ -28,7 +28,7 @@ def scrape_tweets(username):
 		Tweets.append([username, tweet.id_str, tweet.created_at, tweet.text])
 
 	# Create new CSV file
-	outfile = username + "_Tweets.csv"
+	outfile = "Datasets" + username + "_Tweets.csv"
 
 	# Write to CSV file
 	print("Writing to: " + str(outfile))
