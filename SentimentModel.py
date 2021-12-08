@@ -58,7 +58,7 @@ def get_tweets_for_model(clean_tokens_list):
 def Build_Model():
 
     # Grab data from CSV files to create dataframe for modelling
-    df = pandas.read_csv('Training_Tweets.csv')
+    df = pandas.read_csv('Datasets/Training_Tweets.csv')
     Tweets_df = pandas.DataFrame(df, columns = df.columns) # Convert to Pandas Dataframe
 
     positive_tweet_tokens = pandas.DataFrame(columns = df.columns)
@@ -133,7 +133,7 @@ def Build_Model():
 if __name__ == '__main__':
 
     # Implement a CSV of Twitter messages to be tested on
-    Viral_Tweets = pandas.read_csv('1future_tweets.csv')
+    Viral_Tweets = pandas.read_csv('Datasets/1future_tweets.csv')
     Viral_Tweets = pandas.DataFrame(Viral_Tweets, columns = Viral_Tweets.columns)
     DF_length = float(len(Viral_Tweets))
 
