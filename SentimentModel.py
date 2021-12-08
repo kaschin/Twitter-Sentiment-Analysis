@@ -58,7 +58,7 @@ def get_tweets_for_model(clean_tokens_list):
 def Build_Model():
 
     # Grab data from CSV files to create dataframe for modelling
-    df = pandas.read_csv('Tweets.csv')
+    df = pandas.read_csv('Training_Tweets.csv')
     Tweets_df = pandas.DataFrame(df, columns = df.columns) # Convert to Pandas Dataframe
 
     positive_tweet_tokens = pandas.DataFrame(columns = df.columns)
