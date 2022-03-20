@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # Enter Twitter API credentials here: 
-Consumer_Key = "nAVj9mvFcoewA9rcDhIhnPfOY"
-Consumer_Secret = "KICoP2C0oWHLDtkbciFKH32gCT0scJqbfUxTv2FbHj1Q3zDksl"
-Access_Key = "1438843942980632580-eNGRp56B0fpo1to5oZDH0V2nafdbr3"
-Access_Secret = "7JNsPBbpdJ2soCrqqlGF1xNe7XSKyYFCZdg76L9WIV4kI"
+Consumer_Key = ""
+Consumer_Secret = ""
+Access_Key = ""
+Access_Secret = ""
 
 # Pulls and writes Tweets about current trending Topics to CSV
 def scrape_viral_tweets():
